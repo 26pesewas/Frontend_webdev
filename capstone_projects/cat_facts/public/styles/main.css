@@ -1,0 +1,108 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Soft pastel gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Center Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Glassmorphism/Card Effect */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Heading Styling */
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: #4a4e69;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/* Button Container */
+.action-area {
+    margin-top: 20px;
+}
+
+/* Playful Cat Button */
+.cat-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffb7b2; /* Soft pastel pink/coral */
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 15px 35px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(255, 183, 178, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Button Hover Effects */
+.cat-btn:hover {
+    background-color: #ff9aa2; /* Slightly deeper pink */
+    transform: translateY(-3px); /* Lifts button up slightly */
+    box-shadow: 0 8px 20px rgba(255, 154, 162, 0.6);
+}
+
+.cat-btn:active {
+    transform: translateY(-1px); /* Pushes down slightly when clicked */
+}
+
+/* Services List Container */
+.services-list {
+    list-style-type: none;      /* Removes the default bullet points */
+    padding: 0;
+    margin: 30px 0 10px 0;
+    display: flex;              /* Automatically places child items (li) inline side-by-side */
+    flex-wrap: wrap;            /* Allows items to drop to the next line on small screens */
+    justify-content: center;    /* Centers the items horizontally */
+    gap: 20px;                  /* Creates uniform spacing between the items */
+}
+
+/* Individual Service Items */
+.services-list li {
+    display: inline-block;      /* Safe fallback ensuring inline behavior */
+}
+
+/* Service Links styled as micro-buttons */
+.services-list a {
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #000;             /* Clean pastel purple color */
+    background-color: #f0edff;  /* Subtle background matching the text */
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for the links */
+.services-list a:hover {
+    background-color: #6c5ce7;
+    color: #ffffff;
+    transform: translateY(-2px); /* Slight lift effect */
+}

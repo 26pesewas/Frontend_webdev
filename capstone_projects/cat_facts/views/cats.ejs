@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATAAS - Cat as a Service</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Welcome to CATAAS, cat as a service 🐾</h1>
+            
+            <ul class="services-list">
+                <li><a href="/random-cat">Get random cat picture</a></li>
+                <li><a href="/random-saying">Get random cat saying text</a></li>
+                <li><a href="/filter-cats">Choose custom cat options</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class = "cat-display-area">
+        <% if (locals.catImage){ %>
+        <img src="<%=catImage%>" alt="random cute cat" class="cat-img"> 
+        <% } %>
+    </div>
+</body>
+</html>
