@@ -106,3 +106,31 @@ h1 {
     color: #ffffff;
     transform: translateY(-2px); /* Slight lift effect */
 }
+
+/* 1. Container wrapping the dynamic image area */
+.cat-display-area {
+    margin: 40px auto 20px auto;
+    padding: 15px;
+    border-radius: 20px;
+    
+    /* Centers the image perfectly horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Keeps layout stable while the image loads */
+    max-width: 90%;
+}
+
+
+.cat-image {
+    max-width: 100%;    /* Prevents the image from overflowing its container */
+    max-height: 450px;  /* Keeps the image from taking up the whole screen */
+    height: auto;       /* Maintains the cat's original aspect ratio */
+    width: auto;
+    
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Soft shadow for depth */
+    
+    /* Adds a smooth fade-in effect when a new image replaces an old one */
+    transition: all 0.3s ease-in-out; 
+}

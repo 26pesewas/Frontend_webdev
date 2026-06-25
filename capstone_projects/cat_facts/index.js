@@ -18,22 +18,24 @@ app.get("/cats", (req,res) =>{
 // display random picture of cat
 app.get("/random-cat", async (req, res) => {
      try {
-    const catImageUrl = `${MY_URL} + "/cat"`;
+    const catImageUrl = "https://cataas.com/cat";
+    // console.log(catImageUrl);
     res.render("cats.ejs" , {catImage: catImageUrl});
   } catch (error) {
       res.render("cats.ejs", { catImage:null, error: "No cat available 😿" });
     }
 });
 
+
 app.get("/random-saying", async (req, res) => {
-  const searchId = req.body.id;
      try {
-    const result = await axios.get(API_URL + "/cat");
-    res.render("index.ejs" , {content: JSON.stringify(result.data)});
+    const catSays = "https://cataas.com/cat/says/free me";
+    res.render("cats.ejs" , {catTalk: catSays});
   } catch (error) {
-      res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+      res.render("cats.ejs", { catImage:null, error: "No cat available 😿" });
     }
 });
+
 
 app.get("/filter-cats", async (req, res) => {
   const searchId = req.body.id;
@@ -44,6 +46,7 @@ app.get("/filter-cats", async (req, res) => {
       res.render("index.ejs", { content: JSON.stringify(error.response.data) });
     }
 });
+
 
 app.listen(port, () =>{
     console.log(`Server is running on port ${port}`);
